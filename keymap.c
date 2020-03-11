@@ -40,7 +40,7 @@ enum layer_number {
 };
 
 enum custom_keycodes {
-  QWERTY = SAFE_RANGE,
+  QWERTY = NG_SAFE_RANGE,
   DVORAK,
   LOWER,
   RAISE,
@@ -95,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * `-------------------------------------------------------------------------------------------------'
    */
   [_DVORAK] = LAYOUT( \
-      KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    MO(_NUM), \
+      KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                     KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    TG(_NUM), \
       KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,                     KC_G,    KC_R,    KC_L,    KC_C,    KC_F,    KC_BSPC,  \
       KC_LCTL, KC_A,    KC_O,    KC_E,    KC_I,    KC_U,                     KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_RCTL, \
       KC_LALT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,   _______, _______, KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,    KC_RALT, \
@@ -105,7 +105,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   // NICOLA親指シフト
   // デフォルトレイヤーに関係なくQWERTYで
   [_NICOLA] = LAYOUT( \
-      _______, _______, _______, _______, _______, _______,                   _______, _______, _______, _______, _______, _______, \
+      _______, NG_1,    NG_2,    NG_3,    NG_4,    NG_5,                      NG_6,    NG_7,    NG_8,    NG_9,    NG_0,    _______, \
       _______, NG_Q,    NG_W,    NG_E,    NG_R,    NG_T,                      NG_Y,    NG_U,    NG_I,    NG_O,    NG_P,    _______, \
       _______, NG_A,    NG_S,    NG_D,    NG_F,    NG_G,                      NG_H,    NG_J,    NG_K,    NG_L,    NG_SCLN, _______, \
       _______, NG_Z,    NG_X,    NG_C,    NG_V,    NG_B,    KC_SCLN, KC_QUOT, NG_N,    NG_M,    NG_COMM, NG_DOT,  NG_SLSH, _______, \
@@ -169,8 +169,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * `-------------------------------------------------------------------------------------------------'
      */
     [_NUM] = LAYOUT( \
-        KC_TRNS, KC_P7,   KC_P8,   KC_P9,   KC_PSLS, _______,                   _______, _______, _______, _______, _______, KC_TRNS, \
-        _______, KC_P4,   KC_P5,   KC_P6,   KC_PAST, _______,                   _______, _______, _______, _______, _______, KC_TRNS,  \
+        _______, KC_P7,   KC_P8,   KC_P9,   KC_PSLS, _______,                   _______, _______, _______, _______, _______, KC_TRNS, \
+        _______, KC_P4,   KC_P5,   KC_P6,   KC_PAST, _______,                   _______, _______, _______, _______, _______, _______,  \
         _______, KC_P1,   KC_P2,   KC_P3,   KC_PMNS, KC_PEQL,                   _______, _______, _______, _______, _______, _______, \
         _______, KC_P0,   KC_PDOT, KC_PCMM, KC_PPLS, KC_PENT, _______, _______, _______, _______, _______, _______, _______, _______, \
         _______, KC_HOME, KC_PGDN, _______, _______, _______, KC_CAPS, _______, _______, _______, _______, KC_PGUP, KC_END,  _______ \
